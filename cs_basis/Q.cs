@@ -11,8 +11,9 @@ namespace Problem2_2
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            if(input != null)
-            Console.Write(input);
+            string input2 = Console.ReadLine();
+            if (input != null && input2 != null)
+                Console.Write(input + input2);
         }
     }
 }
