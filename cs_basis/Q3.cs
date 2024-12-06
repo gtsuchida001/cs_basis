@@ -10,11 +10,14 @@ namespace Problem2_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("{0} + {1} = {2}", 5, 3, 5 + 3);
-            Console.WriteLine("{0} - {1} = {2}", 5, 2, 5 - 2);
-            Console.WriteLine("{0} * {1} = {2}", 5, 2, 5 * 2);
-            Console.WriteLine("{0} / {1} = {2}", 5, 2, 5 / 2);
-            Console.WriteLine("{0} % {1} = {2}", 5, 2, 5 % 2);
+            int a = 4, b = 2;
+            Console.WriteLine("a = {0}", a);
+            Console.WriteLine("b = {0}", b);
+            Console.WriteLine("a + b = {0}", a + b);
+            Console.WriteLine("a - b = {0}", a - b);
+            Console.WriteLine("a * b = {0}", a * b);
+            Console.WriteLine("a / b = {0}", a / b);
+            Console.WriteLine("a % b = {0}", a % b);
         }
     }
 }
