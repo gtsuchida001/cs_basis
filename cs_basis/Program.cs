@@ -16,8 +16,8 @@
                 Console.WriteLine("Incorrect input");
                 return;
             }
-            if (number != 4)
-                Console.Write("The number is not 4");
+            if (number < 50)
+                Console.Write("Number is less than 50");
          }
      }
  }
