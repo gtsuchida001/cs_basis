@@ -16,8 +16,8 @@
                 Console.WriteLine("Incorrect input");
                 return;
             }
-            if (number < 50)
-                Console.Write("Number is less than 50");
+            if (number <= 20 || number >= 80)
+                Console.Write("The number is under 20 or above 80");
          }
      }
  }
