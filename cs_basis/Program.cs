@@ -10,15 +10,17 @@ namespace Problem3_7
     {
         static void Main(string[] args)
         {
-            Console.Write("abcと入力してください：");
-            string inputString = Console.ReadLine();
-            if (inputString == "abc")
+            Console.Write("文字列１を入力：");
+            string inputString1 = Console.ReadLine();
+            Console.Write("文字列２を入力：");
+            string inputString2 = Console.ReadLine();
+            if (inputString1 == inputString2)
             {
-                Console.WriteLine("abcです。");
+                Console.WriteLine("２つの文字列は等しい");
             }
             else
             {
-                Console.WriteLine("abcではありません。");
+                Console.WriteLine("２つの文字列は等しくない");
             }
         }
     }
