@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem3_6
+namespace Problem3_7
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("a=");
-            int a = int.Parse(Console.ReadLine());
-            Console.Write("b=");
-            int b = int.Parse(Console.ReadLine());
-            if (a > b)
-                Console.WriteLine("a={0} b={1}\naはbよりも大きい", a, b);
-            else if (a < b)
-                Console.WriteLine("a={0} b={1}\naはbよりも小さい", b, a);
+            Console.Write("数値を入力");
+            int num = int.Parse(Console.ReadLine());
+            if (num % 2 == 0)
+            {
+                Console.WriteLine("この数は偶数です。");
+            }
             else
-                Console.WriteLine("a=b={0}\naはbと等しい" , a);
+            {
+                Console.WriteLine("この数は奇数です。");
+            }
         }
     }
 }
