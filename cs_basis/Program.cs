@@ -10,9 +10,12 @@ namespace Problem3_7
     {
         static void Main(string[] args)
         {
-            Console.Write("数値を入力");
-            int num = int.Parse(Console.ReadLine());
-            switch (num)
+            Console.Write("数字を入力：");
+            string? inputString = Console.ReadLine();
+            if (!int.TryParse(inputString, out int result) || inputString == null)
+                return;
+            int input = int.Parse(inputString);
+            switch (input)
             {
                 case 1:
                     Console.WriteLine("春");
