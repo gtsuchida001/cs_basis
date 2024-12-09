@@ -10,19 +10,12 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            for (int a = 0; a < 10; a++)
+            int []a = new int[7];
+            for (int index = 0; index < a.Length; index++)
             {
-                int index = 0;
-                while (index < 10)
-                {
-                    if (index == a)
-                        Console.Write("□");
-                    else
-                        Console.Write("■");
-                    index++;
-                }
-                if (a != 10)
-                    Console.WriteLine();
+                Random random = new Random();
+                a[index] = random.Next(1, 11);
+                Console.Write("a[{0}] = {1}  ", index, a[index]);
             }
         }
     }
