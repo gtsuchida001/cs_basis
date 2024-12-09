@@ -10,7 +10,7 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            Console.Write("温度を入力してください(-10～35)：");
+            Console.Write("整数値を入力：");
             string? inputString = Console.ReadLine();
             if (!int.TryParse(inputString, out int result) || inputString == null)
             {
@@ -18,13 +18,8 @@ namespace Problem
                 return;
             }
             int input = int.Parse(inputString);
-            Console.Write("摂氏{0}度", input);
-            if (input >= 30)
-                Console.Write("\n真夏日です");
-            else if (input >= 25　&& input <30)
-                Console.Write("\n夏日です");
-            else if (input < 0)
-                Console.Write("\n真冬日です");
+            for (int i = 0; i < input; i++)
+                Console.Write("■");
         }
     }
 }
