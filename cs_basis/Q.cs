@@ -24,12 +24,21 @@ namespace Problem
                 Console.Write("■");
                 i++;
             } while (i < input);*/
-            for (int num = 3; num >= 0; num--)
+            /*for (int num = 3; num >= 0; num--)
             {
                 if (num != 0)
                     Console.WriteLine("num={0}" , num);
                 else
                     Console.Write("num=0");
+            }*/
+            int num = 3;
+            while (num >= 0)
+            {
+                if (num != 0)
+                    Console.WriteLine("num={0}", num);
+                else
+                    Console.Write("num=0");
+                num--;
             }
         }
     }
