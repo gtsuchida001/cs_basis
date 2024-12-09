@@ -19,11 +19,11 @@ namespace Problem
             }
             int input = int.Parse(inputString);
             int i = 0;
-            while (i < input)
+            do
             {
                 Console.Write("■");
                 i++;
-            }
+            } while (i < input);
         }
     }
 }
