@@ -10,14 +10,19 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            for (int a = 1; a < 10; a++)
+            for (int a = 0; a < 10; a++)
             {
-                for (int b = 1; b < 10; b++)
+                int index = 0;
+                while (index < 10)
                 {
-                    Console.Write("{0}*{1}={2}  ", a, b, a*b);
-                    if (b == 9 && a != 9)
-                        Console.WriteLine("");
+                    if (index == a)
+                        Console.Write("□");
+                    else
+                        Console.Write("■");
+                    index++;
                 }
+                if (a != 10)
+                    Console.WriteLine();
             }
         }
     }
