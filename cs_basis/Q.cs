@@ -18,8 +18,12 @@ namespace Problem
                 return;
             }
             int input = int.Parse(inputString);
-            for (int i = 0; i < input; i++)
+            int i = 0;
+            while (i < input)
+            {
                 Console.Write("■");
+                i++;
+            }
         }
     }
 }
