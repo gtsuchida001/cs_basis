@@ -10,20 +10,20 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            int max = 0;
-            int min = 100;
+            int even = 0;
+            int odd = 0;
             for (int i = 0; i < 5; i++)
             {
                 Random rnd = new Random();
                 int n = rnd.Next(1, 100);
                 Console.WriteLine(n);
-                if (max < n)
-                    max = n;
-                if (min > n)
-                    min = n;
+                if (n % 2 == 0)
+                    even++;
+                else
+                    odd++;
             }
-            Console.WriteLine("最大値: " + max);
-            Console.Write("最小値: " + min);
+            Console.WriteLine("偶数の数：" + even);
+            Console.Write("奇数の数：" + odd);
         }
     }
 }
