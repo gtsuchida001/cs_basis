@@ -10,9 +10,12 @@ namespace Problem3_7
     {
         static void Main(string[] args)
         {
-            Console.Write("数値を入力");
-            int num = int.Parse(Console.ReadLine());
-            if (num % 2 == 0)
+            Console.Write("数字を入力：");
+            string? inputString = Console.ReadLine();
+            if (!int.TryParse(inputString, out int result) || inputString == null)
+                return;
+            int input = int.Parse(inputString);
+            if (input % 2 == 0)
             {
                 Console.WriteLine("この数は偶数です。");
             }
