@@ -10,27 +10,21 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            Console.Write("a,bに1から10までの数値を入力してください。");
+            Console.Write("点数(1-100)：");
             string? inputString = Console.ReadLine();
             if (!int.TryParse(inputString, out int result) || inputString == null)
                 return;
             int input = int.Parse(inputString);
-            Console.Write("a,bに1から10までの数値を入力してください。");
-            string? inputString2 = Console.ReadLine();
-            if (!int.TryParse(inputString2, out int result2) || inputString2 == null)
-                return;
-            int input2 = int.Parse(inputString2);
-            if (input <=0 || input2 <= 0 || input > 10 || input > 10)
-            {
-                Console.WriteLine("1から10までの数値を入力してください。");
-                return;
-            }
-            if (input == input2)
-                Console.WriteLine("aとbは同じ値です。");
-            else if (input < input2)
-                Console.WriteLine("aはbより小さい値です。");
+            if (input >= 80 && input <=100)
+                Console.WriteLine("優");
+            else if (input >= 70 && input < 80)
+                Console.WriteLine("良");
+            else if (input >= 60 && input < 70)
+                Console.WriteLine("可");
+            else if (input >= 0 && input < 60)
+                Console.WriteLine("不可");
             else
-                Console.WriteLine("aはbより大きい値です。");
+                Console.WriteLine("範囲外");
         }
     }
 }
