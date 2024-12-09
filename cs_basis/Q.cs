@@ -10,15 +10,12 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            int index = 0;
-            while (index >= 0)
+            for (int i = 0; i < 5; i++)
             {
-                Random rnd = new Random();
-                int number = rnd.Next(1, 100);
-                Console.Write(number);
-                if (number % 10 == 0)
-                    index--;
-                else
+                Random r = new Random();
+                int n = r.Next(1, 101);
+                Console.Write(n);
+                if (i != 4)
                     Console.Write("\n");
             }
         }
