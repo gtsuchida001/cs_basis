@@ -14,7 +14,7 @@ namespace Problem
             while (index >= 0)
             {
                 Random rnd = new Random();
-                int number = rnd.Next(1, 100);
+                int number = rnd.Next(1, 101);
                 Console.Write(number);
                 if (number % 10 == 0)
                     index--;
