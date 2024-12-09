@@ -10,20 +10,18 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            int even = 0;
-            int odd = 0;
-            for (int i = 0; i < 5; i++)
+            Random rnd = new Random();
+            int n = rnd.Next(1, 11);
+            Console.WriteLine("発生した数値：" + n);
+            if (n >= 5)
+                for (int i = 0; i < n; i++)
+                    Console.Write("★");
+            else
             {
-                Random rnd = new Random();
-                int n = rnd.Next(1, 100);
-                Console.WriteLine(n);
-                if (n % 2 == 0)
-                    even++;
-                else
-                    odd++;
+                for (int i = 0; i < n; i++)
+                    Console.Write("☆");
             }
-            Console.WriteLine("偶数の数：" + even);
-            Console.Write("奇数の数：" + odd);
+
         }
     }
 }
