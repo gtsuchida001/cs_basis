@@ -24,14 +24,14 @@ namespace Problem
                 Console.Write("■");
                 i++;
             } while (i < input);*/
-            /*for (int num = 3; num >= 0; num--)
+            for (int a = 2; a <= 8; a += 2)
             {
-                if (num != 0)
-                    Console.WriteLine("num={0}" , num);
+                if (a != 8)
+                    Console.WriteLine("a={0}", a);
                 else
-                    Console.Write("num=0");
-            }*/
-            int a = 2;
+                    Console.Write("a=8");
+            }
+            /*int a = 2;
             while (a <= 8)
             {
                 if (a != 8)
@@ -39,7 +39,7 @@ namespace Problem
                 else
                     Console.Write("a=8");
                 a += 2;
-            }
+            }*/
         }
     }
 }
