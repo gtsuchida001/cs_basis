@@ -10,13 +10,9 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            int []a = new int[7];
-            for (int index = 0; index < a.Length; index++)
-            {
-                Random random = new Random();
-                a[index] = random.Next(1, 11);
-                Console.Write("a[{0}] = {1}  ", index, a[index]);
-            }
+            double []a = { 0.2, -5.1, 3.2, 1.8};
+            for (int i = 0; i < a.Length; i++)
+                Console.Write("a[{0}] = {1}  ", i, a[i]);
         }
     }
 }
