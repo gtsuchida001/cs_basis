@@ -10,21 +10,31 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            Console.Write("点数(1-100)：");
+            Console.Write("整数値を入力：");
             string? inputString = Console.ReadLine();
             if (!int.TryParse(inputString, out int result) || inputString == null)
-                return;
+                return ;
             int input = int.Parse(inputString);
-            if (input >= 80 && input <=100)
-                Console.WriteLine("優");
-            else if (input >= 70 && input < 80)
-                Console.WriteLine("良");
-            else if (input >= 60 && input < 70)
-                Console.WriteLine("可");
-            else if (input >= 0 && input < 60)
-                Console.WriteLine("不可");
+            
+            int p2 = input % 2;
+            int p3 = input % 3;
+            if (p2 == 0 && p3 == 0)
+            {
+                Console.WriteLine("2と3の公倍数です。");
+                return;
+            }
+            else if (p2 == 0)
+            {
+                Console.WriteLine("2の公倍数です。");
+                return;
+            }
+            else if (p3 == 0)
+            {
+                Console.WriteLine("3の公倍数です。");
+                return;
+            }
             else
-                Console.WriteLine("範囲外");
+                Console.WriteLine("2でも3でも割り切れません");
         }
     }
 }
