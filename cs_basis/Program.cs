@@ -4,23 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Problem3_7
+namespace Problem
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("文字列１を入力：");
-            string inputString1 = Console.ReadLine();
-            Console.Write("文字列２を入力：");
-            string inputString2 = Console.ReadLine();
-            if (inputString1 == inputString2)
+            Console.Write("数字を入力：");
+            string inputString = Console.ReadLine();
+            int input = int.Parse(inputString);
+            if (input >= 0 && input <= 100)
             {
-                Console.WriteLine("２つの文字列は等しい");
+                    if (input >= 20 && input <= 80)
+                Console.WriteLine("20以上80未満です。");
+                    else
+                    Console.WriteLine("20未満か80以上です。");
             }
             else
             {
-                Console.WriteLine("２つの文字列は等しくない");
+                Console.WriteLine("範囲外です");
             }
         }
     }
