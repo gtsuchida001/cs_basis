@@ -10,7 +10,7 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            Console.Write("整数値を入力：");
+            /*Console.Write("整数値を入力：");
             string? inputString = Console.ReadLine();
             if (!int.TryParse(inputString, out int result) || inputString == null)
             {
@@ -23,7 +23,14 @@ namespace Problem
             {
                 Console.Write("■");
                 i++;
-            } while (i < input);
+            } while (i < input);*/
+            for (int num = 3; num >= 0; num--)
+            {
+                if (num != 0)
+                    Console.WriteLine("num={0}" , num);
+                else
+                    Console.Write("num=0");
+            }
         }
     }
 }
