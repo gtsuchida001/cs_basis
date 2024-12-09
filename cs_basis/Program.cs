@@ -11,7 +11,9 @@ namespace Problem
         static void Main(string[] args)
         {
             Console.Write("数字を入力：");
-            string inputString = Console.ReadLine();
+            string? inputString = Console.ReadLine();
+            if (!int.TryParse(inputString, out int result) || inputString == null)
+                return;
             int input = int.Parse(inputString);
             if (input >= 0 && input <= 100)
             {
