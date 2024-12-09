@@ -10,12 +10,14 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i <= 100; i++)
+            for (int a = 1; a < 10; a++)
             {
-                if (i % 10 == 0 && i != 100)
-                    Console.WriteLine(i);
-                else
-                    Console.Write(i + " ");
+                for (int b = 1; b < 10; b++)
+                {
+                    Console.Write("{0}*{1}={2}  ", a, b, a*b);
+                    if (b == 9 && a != 9)
+                        Console.WriteLine("");
+                }
             }
         }
     }
