@@ -11,19 +11,16 @@ namespace Problem
         static void Main(string[] args)
         {
             Console.Write("数字を入力：");
-            string inputString = Console.ReadLine();
+            string? inputString = Console.ReadLine();
+            if (!int.TryParse(inputString, out int result) || inputString == null)
+                return ;
             int input = int.Parse(inputString);
-            if (input >= 0 && input <= 100)
-            {
-                    if (input >= 20 && input <= 80)
-                Console.WriteLine("20以上80未満です。");
-                    else
-                    Console.WriteLine("20未満か80以上です。");
-            }
+            if (input == 0)
+                Console.WriteLine("入力された数字は0です。");
+            else if (input > 0)
+                Console.WriteLine("入力された数字は正の数です。");
             else
-            {
-                Console.WriteLine("範囲外です");
-            }
+                Console.WriteLine("入力された数字は負の数です。");
         }
     }
 }
