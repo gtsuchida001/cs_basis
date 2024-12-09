@@ -10,16 +10,12 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int n = rnd.Next(1, 11);
-            Console.WriteLine("発生した数値：" + n);
-            if (n % 2 == 0)
-                for (int i = 0; i < n; i++)
-                    Console.Write("★");
-            else
+            for (int i = 1; i <= 100; i++)
             {
-                for (int i = 0; i < n; i++)
-                    Console.Write("☆");
+                if (i % 10 == 0 && i != 100)
+                    Console.WriteLine(i);
+                else
+                    Console.Write(i + " ");
             }
         }
     }
