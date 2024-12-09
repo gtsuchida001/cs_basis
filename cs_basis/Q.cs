@@ -10,16 +10,18 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            if (string.IsNullOrEmpty(input))
+            Console.Write("数字を入力：");
+            string? inputString = Console.ReadLine();
+            if (!int.TryParse(inputString, out int result) || inputString == null)
                 return;
-            if (!int.TryParse(input, out int number))
+            int input = int.Parse(inputString);
+            if (!int.TryParse(inputString, out int number))
             {
                 Console.WriteLine("Incorrect input");
                 return;
             }
-            if (number == 3)
-                Console.Write(number);
+            if (input == 3)
+                Console.Write(input);
         }
     }
 }
