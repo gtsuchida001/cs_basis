@@ -10,30 +10,21 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            Console.Write("整数を入力してください(1-100)：");
+            Console.Write("温度を入力してください(-10～35)：");
             string? inputString = Console.ReadLine();
             if (!int.TryParse(inputString, out int result) || inputString == null)
-                return ;
-            int input = int.Parse(inputString);
-
-            int index = input % 2;
-            if (input <= 100 && input >= 1)
             {
-                if (input <= 50)
-                {
-                    if (index == 0)
-                        Console.WriteLine("50以下の偶数です。");
-                    else
-                        Console.WriteLine("50以下です。");
-                    return ;
-                }
-                if (index == 0)
-                    Console.WriteLine("偶数です。");
-                return ;
-            }
-            else
                 Console.WriteLine("適切な値を入力してください。");
-            return ;
+                return;
+            }
+            int input = int.Parse(inputString);
+            Console.Write("摂氏{0}度", input);
+            if (input >= 30)
+                Console.Write("\n真夏日です");
+            else if (input >= 25　&& input <30)
+                Console.Write("\n夏日です");
+            else if (input < 0)
+                Console.Write("\n真冬日です");
         }
     }
 }
