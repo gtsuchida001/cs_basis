@@ -10,17 +10,20 @@ namespace Problem
     {
         static void Main(string[] args)
         {
-            int index = 0;
-            while (index >= 0)
+            int max = 0;
+            int min = 100;
+            for (int i = 0; i < 5; i++)
             {
                 Random rnd = new Random();
-                int number = rnd.Next(1, 101);
-                Console.Write(number);
-                if (number % 10 == 0)
-                    index--;
-                else
-                    Console.Write("\n");
+                int n = rnd.Next(1, 100);
+                Console.WriteLine(n);
+                if (max < n)
+                    max = n;
+                if (min > n)
+                    min = n;
             }
+            Console.WriteLine("最大値: " + max);
+            Console.Write("最小値: " + min);
         }
     }
 }
