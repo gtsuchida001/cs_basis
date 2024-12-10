@@ -10,19 +10,18 @@ namespace cs_basis
     {
         static void Main(string[] args)
         {
-            int max = 100;
+            string? i = Console.ReadLine();
+            int j = 0;
+            if (int.TryParse(i, out j)){
 
-            for (int a = 1; a <= max; a++)
-            {
-                for (int b = a; b <= max; b++)
+                int k = j;
+                for (int index = j; index > 0; index--)
                 {
-                    double c = Math.Sqrt(a * a + b * b);
-                    if (c % 1 == 0 && c <= max)
-                    {
-                        Console.WriteLine(a + " " + b + " " + c);
-                    }
+                    j *= index;
                 }
+                j = j / k;
             }
+            Console.WriteLine(j);
         }
     }
 }
