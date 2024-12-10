@@ -10,32 +10,30 @@ namespace cs_basis
     {
         static void Main()
         {
-            int []data = new int[7];
-            List<int> case1 = new List<int>();
-            List<int> case2 = new List<int>();
-            List<int> case3 = new List<int>();
+            int [,]data = new int[3,3];
 
-            for (int index = 0; index < data.Length; index++)
+            for (int index = 0; index < data.GetLength(0); index++)
             {
-                Random random = new Random();
-                data[index] = random.Next(0, 101);
-                Console.Write("{0}", data[index]);
-                if (data[index] != data[^1])
-                    Console.Write(" ");
+                for (int index2 = 0; index2 < data.GetLength(1); index2++)
+                {
+                    Random random = new Random();
+                    data[index,index2] = random.Next(0, 10);
+                    //Console.Write("{0}", data[index,index2]);
+                    //if (data[index,index2] != data[index, data.GetLength(1) - 1])
+                        //Console.Write(" ");
+                }
             }
-            Console.WriteLine("\n");
-            for (int index = 0; index < data.Length; index++)
+            for (int index = 0; index < data.GetLength(0); index++)
             {
-                if (data[index] < 60 && data[index] >= 0)
-                    case1.Add(data[index]);
-                else if (data[index] >= 60 && data[index] < 80)
-                    case2.Add(data[index]);
-                else if (data[index] >= 80)
-                    case3.Add(data[index]);
+                for (int index2 = 0; index2 < data.GetLength(1); index2++)
+                {
+                    Console.Write("{0}", data[index,index2]);
+                    if (index2 != data.GetLength(1) - 1)
+                        Console.Write(" ");
+                    if (index != data.GetLength(0) - 1 && index2 == data.GetLength(1) - 1)
+                        Console.WriteLine();
+                }
             }
-            Console.WriteLine("0以上60未満：" + string.Join(" ", case1));
-            Console.WriteLine("60以上80未満：" + string.Join(" ", case2));
-            Console.Write("80以上：" + string.Join(" ", case3));
             int t = Console.Read();
         }
     }
