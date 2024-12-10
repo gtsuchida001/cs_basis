@@ -10,7 +10,7 @@ namespace cs_basis
     {
         static void Main()
         {
-            int []data = new int[100];
+            int []data = new int[10];
             for (int index = 0; index < data.Length; index++)
             {
                 Random random = new Random();
@@ -20,28 +20,22 @@ namespace cs_basis
                     Console.Write(" ");
             }
             Console.WriteLine();
-            int i = 0;
-            Console.Write("50以上の数：");
-            while (i < data.Length)
-            {
-                if (data[i] >= 50)
-                    Console.Write("{0}", data[i]);
-                if (i != data.Length - 1)
-                    Console.Write(" ");
-                i++;
+            int max = 0;
+            int min = 10;
+            int ave= 0;
+            for (int index = 0; index < data.Length; index++){
+            
+                if (max < data[index])
+                    max = data[index];
+                if (min > data[index])
+                    min = data[index];
             }
-            i = 0;
-            Console.WriteLine();
-            Console.Write("50未満の数：");
-            while (i < data.Length)
-            {
-                if (data[i] < 50)
-                    Console.Write("{0}", data[i]);
-                if (i != data.Length - 1)
-                    Console.Write(" ");
-                i++;
-            }
-
+            for (int index = 0; index < data.Length; index++)
+                ave += data[index];
+            ave /= data.Length;
+            Console.WriteLine("最大値：{0}", max);
+            Console.WriteLine("最小値：{0}", min);
+            Console.Write("平均値：{0}", ave);
             int t = Console.Read();
         }
     }
