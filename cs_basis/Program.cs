@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Problem6_3
+namespace Problem7_1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Circle c = new Circle();
-            //  ‰~‚Ì”¼Œa‚ğİ’è
-            c.r = 4.0;
-            Console.WriteLine("”¼Œa" + c.r + "‚Ì‰~‚Ì‰~ü‚Ì’·‚³‚Í" + c.Circumference());
-            Console.Write("”¼Œa" + c.r + "‚Ì‰~‚Ì–ÊÏ‚Ì‘å‚«‚³‚Í" + c.Area());
+            Data d = new Data();
+            d.DataNumber = 100;
+            d.DataComment = "Programming C#";
+            Console.WriteLine("number = " + d.DataNumber);
+            Console.WriteLine("comment = " + d.DataComment);
         }
     }
 }
