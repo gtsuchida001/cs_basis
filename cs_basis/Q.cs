@@ -10,7 +10,7 @@ namespace cs_basis
     {
         static void Main()
         {
-            int []data = new int[100];
+            int []data = new int[10];
             for (int index = 0; index < data.Length; index++)
             {
                 Random random = new Random();
@@ -21,24 +21,26 @@ namespace cs_basis
             }
             Console.WriteLine();
             int i = 0;
-            Console.Write("50以上の数：");
+            Console.Write("3の倍数：");
             while (i < data.Length)
             {
-                if (data[i] >= 50)
+                if (data[i] % 3 == 0){
                     Console.Write("{0}", data[i]);
-                if (i != data.Length - 1)
-                    Console.Write(" ");
+                    if (i != data.Length - 1)
+                        Console.Write(" ");
+                }
                 i++;
             }
             i = 0;
             Console.WriteLine();
-            Console.Write("50未満の数：");
+            Console.Write("3の倍数以外の数:");
             while (i < data.Length)
             {
-                if (data[i] < 50)
+                if (data[i] % 3 != 0){
                     Console.Write("{0}", data[i]);
-                if (i != data.Length - 1)
-                    Console.Write(" ");
+                    if (i != data.Length - 1)
+                        Console.Write(" ");
+                }
                 i++;
             }
 
