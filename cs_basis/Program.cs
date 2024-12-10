@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Problem7_1
+namespace Problem7_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Data d = new Data();
-            d.DataNumber = 100;
-            d.DataComment = "Programming C#";
-            Console.WriteLine("number = " + d.DataNumber);
-            Console.WriteLine("comment = " + d.DataComment);
+            TwoStrings s = new TwoStrings();
+            s.String1 = "Hello";
+            s.String2 = "World";
+            Console.WriteLine("ˆê‚Â–Ú‚Ì•¶š—ñ‚Í" + s.String1);
+            Console.WriteLine("“ñ‚Â–Ú‚Ì•¶š—ñ‚Í" + s.String2);
+            Console.WriteLine("“ñ‚Â‚Ì•¶š—ñ‚ğ‡¬‚µ‚½‚à‚Ì‚Í" + s.GetConnectedString());
         }
     }
 }
