@@ -10,7 +10,15 @@ namespace cs_basis
     {
         static void Main()
         {
-            int []data = new int[10];
+            int []data = new int[5];
+
+            int i = 0;
+            int j = 0;
+            List<int> over_ave = new List<int>();
+            List<int> under_ave = new List<int>();
+            int sum = 0;
+            int ave = 0;
+
             for (int index = 0; index < data.Length; index++)
             {
                 Random random = new Random();
@@ -20,22 +28,21 @@ namespace cs_basis
                     Console.Write(" ");
             }
             Console.WriteLine();
-            int max = 0;
-            int min = 10;
-            int ave= 0;
-            for (int index = 0; index < data.Length; index++){
-            
-                if (max < data[index])
-                    max = data[index];
-                if (min > data[index])
-                    min = data[index];
-            }
             for (int index = 0; index < data.Length; index++)
-                ave += data[index];
-            ave /= data.Length;
-            Console.WriteLine("最大値：{0}", max);
-            Console.WriteLine("最小値：{0}", min);
-            Console.Write("平均値：{0}", ave);
+                sum += data[index];
+            ave = sum / data.Length;
+            for (int index = 0; index < data.Length; index++)
+            {
+                if (data[index] > ave){
+                    over_ave.Add(data[index]);
+                }
+                if (data[index] < ave)
+                {
+                    under_ave.Add(data[index]);
+                }
+            }
+            Console.WriteLine("平均値より大きい数：" + string.Join(" " , over_ave));
+            Console.Write("平均値より小さい数：" + string.Join(" ", under_ave));
             int t = Console.Read();
         }
     }
