@@ -10,39 +10,31 @@ namespace cs_basis
     {
         static void Main()
         {
-            int []data = new int[10];
-
-            List<int> over_0 = new List<int>();
-            List<int> under_0 = new List<int>();
-            List<int> zero = new List<int>();
-
+            int []data = new int[7];
 
             for (int index = 0; index < data.Length; index++)
             {
                 Random random = new Random();
-                data[index] = random.Next(0, 101);
+                data[index] = random.Next(0, 11);
                 Console.Write("{0}", data[index]);
                 if (data[index] != data[^1])
                     Console.Write(" ");
             }
-            Console.WriteLine();
+            Console.WriteLine("\n");
             for (int index = 0; index < data.Length; index++)
             {
-                if (data[index] > 0){
-                    over_0.Add(data[index]);
-                }
-                if (data[index] < 50)
+                int i = data[index];
+                if (i == 0)
+                    Console.WriteLine();
+                while (i > 0)
                 {
-                    under_0.Add(data[index]);
-                }
-                if (data[index] == 0)
-                {
-                    zero.Add(data[index]);
+                    Console.Write("*");
+                    if (i == 1)
+                        Console.WriteLine();
+                    i--;
                 }
             }
-            Console.WriteLine("50以上の数：" + string.Join(" " , over_0));
-            Console.WriteLine("50以下の数：" + string.Join(" ", under_0));
-            Console.Write("0の数：" + string.Join(" ", zero));
+            
             int t = Console.Read();
         }
     }
