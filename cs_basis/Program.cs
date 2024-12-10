@@ -10,18 +10,13 @@ namespace cs_basis
     {
         static void Main(string[] args)
         {
-            string? i = Console.ReadLine();
-            int j = 0;
-            if (int.TryParse(i, out j)){
-
-                int k = j;
-                for (int index = j; index > 0; index--)
-                {
-                    j *= index;
-                }
-                j = j / k;
+            for (int index = 100; index > 0; index--)
+            {
+                if (index % 3 == 0)
+                    Console.WriteLine("{0}", index);
             }
-            Console.WriteLine(j);
         }
+
+        
     }
 }
