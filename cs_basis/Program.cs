@@ -16,12 +16,10 @@ namespace cs_basis
             {
                 for (int b = a; b <= max; b++)
                 {
-                    for (int c = b; c <= max; c++)
+                    double c = Math.Sqrt(a * a + b * b);
+                    if (c % 1 == 0 && c <= max)
                     {
-                        if (a * a + b * b == c * c)
-                        {
-                            Console.WriteLine($"a = {a}, b = {b}, c = {c}");
-                        }
+                        Console.WriteLine(a + " " + b + " " + c);
                     }
                 }
             }
