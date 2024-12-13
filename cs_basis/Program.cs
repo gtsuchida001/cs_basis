@@ -10,14 +10,27 @@ namespace cs_basis
     {
         static void Main(string[] args)
         {
-            List<int> numbers = new List<int>();
-            for (int index = 100; index > 0; index--)
+            Random random = new Random();
+            int y = random.Next(1, 11);
+            int x = random.Next(1, 11);
+            int y2 = random.Next(1, 11);
+            int x2 = random.Next(1, 11);
+            int y3 = 0;
+            int x3 = 0;
+
+            x3 = x * x2;
+            y3 = y2 * x + y * x2;
+
+            for (int i = 2; i <= Math.Min(x3, y3); i++)
             {
-                if (index % 3 == 0)
-                    numbers.Add(index);
+                if (x3 % i == 0 && y3 % i == 0)
+                {
+                    x3 /= i;
+                    y3 /= i;
+                    i = 1;
+                }
             }
-            numbers.Reverse();
-            Console.Write(string.Join(", ", numbers));
+            Console.Write("{0}/{1} + {2}/{3} = {4}/{5} " ,y,x,y2,x2,y3,x3);
         }
     }
 }
