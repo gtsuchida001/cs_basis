@@ -30,12 +30,24 @@ namespace cs_basis
                     i = 1;
                 }
             }
-            if (y3 % x3 == 0){
+            if (y3 % x3 == 0)
+            {
                 y3 = y3 / x3;
                 Console.Write("{0}/{1} + {2}/{3} = {4} ", y, x, y2, x2, y3);
             }
+            else if (y3 > x3)
+            {
+                int count = 0;
+                int j = y3;
+                while (j > x3)
+                {
+                    j = j - x3;
+                    count++;
+                }
+                    Console.Write("{0}/{1} + {2}/{3} = {4}({5}/{6}) ", y, x, y2, x2, count, j, x3);
+            }
             else
-                Console.Write("{0}/{1} + {2}/{3} = {4}/{5} " ,y,x,y2,x2,y3,x3);
+                Console.Write("{0}/{1} + {2}/{3} = {4}/{5} ", y, x, y2, x2, y3, x3);
 
         }
     }
