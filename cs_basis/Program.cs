@@ -15,13 +15,19 @@ namespace cs_basis
             if (int.TryParse(i, out j)){
 
                 int k = j;
+                if (j == 0)
+                {
+                    j = 1;
+                    Console.Write(j);
+                    return;
+                }
                 for (int index = j; index > 0; index--)
                 {
                     j *= index;
                 }
                 j = j / k;
             }
-            Console.WriteLine(j);
+            Console.Write(j);
         }
     }
 }
