@@ -30,7 +30,13 @@ namespace cs_basis
                     i = 1;
                 }
             }
-            Console.Write("{0}/{1} + {2}/{3} = {4}/{5} " ,y,x,y2,x2,y3,x3);
+            if (y3 % x3 == 0){
+                y3 = y3 / x3;
+                Console.Write("{0}/{1} + {2}/{3} = {4} ", y, x, y2, x2, y3);
+            }
+            else
+                Console.Write("{0}/{1} + {2}/{3} = {4}/{5} " ,y,x,y2,x2,y3,x3);
+
         }
     }
 }
