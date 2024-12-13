@@ -11,44 +11,17 @@ namespace cs_basis
         static void Main(string[] args)
         {
             Random random = new Random();
-            int y = random.Next(1, 11);
-            int x = random.Next(1, 11);
-            int y2 = random.Next(1, 11);
-            int x2 = random.Next(1, 11);
-            int y3 = 0;
-            int x3 = 0;
+            int i = random.Next(1, 1001);
+            int j = 0;
 
-            x3 = x * x2;
-            y3 = y2 * x + y * x2;
-
-            for (int i = 2; i <= Math.Min(x3, y3); i++)
+            Console.WriteLine("The number is: " + i);
+            for (int k = 1; k < i + 1; k++)
             {
-                if (x3 % i == 0 && y3 % i == 0)
+                if (i % k == 0)
                 {
-                    x3 /= i;
-                    y3 /= i;
-                    i = 1;
+                    Console.WriteLine(k);
                 }
             }
-            if (y3 % x3 == 0)
-            {
-                y3 = y3 / x3;
-                Console.Write("{0}/{1} + {2}/{3} = {4} ", y, x, y2, x2, y3);
-            }
-            else if (y3 > x3)
-            {
-                int count = 0;
-                int j = y3;
-                while (j > x3)
-                {
-                    j = j - x3;
-                    count++;
-                }
-                    Console.Write("{0}/{1} + {2}/{3} = {4}({5}/{6}) ", y, x, y2, x2, count, j, x3);
-            }
-            else
-                Console.Write("{0}/{1} + {2}/{3} = {4}/{5} ", y, x, y2, x2, y3, x3);
-
         }
     }
 }
