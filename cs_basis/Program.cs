@@ -10,13 +10,14 @@ namespace cs_basis
     {
         static void Main(string[] args)
         {
+            List<int> numbers = new List<int>();
             for (int index = 100; index > 0; index--)
             {
                 if (index % 3 == 0)
-                    Console.WriteLine("{0}", index);
+                    numbers.Add(index);
             }
+            numbers.Reverse();
+            Console.Write(string.Join(", ", numbers));
         }
-
-        
     }
 }
